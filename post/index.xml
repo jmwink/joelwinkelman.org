@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> </title>
-    <link>http://tummychow.github.io/lanyon-hugo/post/index.xml</link>
+    <link>http://tummychow.github.io/post/index.xml</link>
     <language>en-us</language>
     <author>Mark Otto</author>
     <rights>(C) 2014</rights>
@@ -12,10 +12,10 @@
       
         <item>
           <title>Introducing Lanyon</title>
-          <link>http://tummychow.github.io/lanyon-hugo/2014/01/02/introducing-lanyon/</link>
+          <link>http://tummychow.github.io/2014/01/02/introducing-lanyon/</link>
           <pubDate>Thu, 02 Jan 2014 00:00:00 UTC</pubDate>
           <author>Mark Otto</author>
-          <guid>http://tummychow.github.io/lanyon-hugo/2014/01/02/introducing-lanyon/</guid>
+          <guid>http://tummychow.github.io/2014/01/02/introducing-lanyon/</guid>
           <description>
 
 &lt;p&gt;Lanyon is an unassuming &lt;a href=&#34;http://jekyllrb.com&#34;&gt;Jekyll&lt;/a&gt; theme that places content first by tucking away navigation in a hidden drawer. It&amp;rsquo;s based on &lt;a href=&#34;http://getpoole.com&#34;&gt;Poole&lt;/a&gt;, the Jekyll butler.&lt;/p&gt;
@@ -62,10 +62,10 @@
       
         <item>
           <title>Example content</title>
-          <link>http://tummychow.github.io/lanyon-hugo/2014/01/01/example-content/</link>
+          <link>http://tummychow.github.io/2014/01/01/example-content/</link>
           <pubDate>Wed, 01 Jan 2014 00:00:00 UTC</pubDate>
           <author>Mark Otto</author>
-          <guid>http://tummychow.github.io/lanyon-hugo/2014/01/01/example-content/</guid>
+          <guid>http://tummychow.github.io/2014/01/01/example-content/</guid>
           <description>
 
 &lt;div class=&#34;message&#34;&gt;
@@ -103,15 +103,14 @@
 
 &lt;p&gt;Cum sociis natoque penatibus et magnis dis &lt;code&gt;code element&lt;/code&gt; montes, nascetur ridiculus mus.&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #75715e&#34;&gt;// Example can be run directly in your JavaScript console&lt;/span&gt;
+&lt;p&gt;// Example can be run directly in your JavaScript console&lt;/p&gt;
 
-&lt;span style=&#34;color: #75715e&#34;&gt;// Create a function that takes two arguments and returns the sum of those arguments&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;adder&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;Function(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;return a + b&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;);&lt;/span&gt;
+&lt;p&gt;// Create a function that takes two arguments and returns the sum of those arguments
+var adder = new Function(&amp;ldquo;a&amp;rdquo;, &amp;ldquo;b&amp;rdquo;, &amp;ldquo;return a + b&amp;rdquo;);&lt;/p&gt;
 
-&lt;span style=&#34;color: #75715e&#34;&gt;// Call the function&lt;/span&gt;
-&lt;span style=&#34;color: #a6e22e&#34;&gt;adder&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;6&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;);&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;// &amp;gt; 8&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;// Call the function
+adder(2, 6);
+// &amp;gt; 8&lt;/p&gt;
 
 &lt;p&gt;Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.&lt;/p&gt;
 
@@ -198,10 +197,10 @@
       
         <item>
           <title>What&#39;s Jekyll?</title>
-          <link>http://tummychow.github.io/lanyon-hugo/2013/12/31/whats-jekyll/</link>
+          <link>http://tummychow.github.io/2013/12/31/whats-jekyll/</link>
           <pubDate>Tue, 31 Dec 2013 00:00:00 UTC</pubDate>
           <author>Mark Otto</author>
-          <guid>http://tummychow.github.io/lanyon-hugo/2013/12/31/whats-jekyll/</guid>
+          <guid>http://tummychow.github.io/2013/12/31/whats-jekyll/</guid>
           <description>&lt;p&gt;&lt;a href=&#34;http://jekyllrb.com&#34;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&#34;https://github.com/mojombo/jekyll/blob/master/README.markdown&#34;&gt;the project&amp;rsquo;s readme&lt;/a&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
