@@ -1,35 +1,36 @@
-{{ template "chrome/default_head.html" . }}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
 
-{{ $pagination := 5 }}
 
-<div class="posts">
-  {{ range first $pagination .Data.Pages }}
-    {{ if eq .Type "post"}}
-      <div class="post">
-        <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-        <span class="post-date">{{ .Date.Format .Site.Params.DateForm }}</span>
-        {{ .Content }}
-      </div>
-    {{ end }}
-  {{ end }}
+
+    <base href="{{ .Site.BaseUrl }}">
+    <title>{{ .Site.Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+
+    {{ template "chrome/default_head.html" . }}
+</head>
+<body lang="en">
+
+  {{ template "chrome/sidebar.html" . }}
+  
+  <div class="content container">
+    <div class="fixed">
+
+<h1>I teach political theory at Hamilton College</h1>
+
+<p class="lead"> I am a Visiting Assistant Professor in <a href="http://www.hamilton.edu/academics/departments/Home?dept=Government">Government</a>. I work also with the <a href="http://www.hamilton.edu/levitt">Arthur Levitt Public Affairs Center</a>.</p>
+
+<h1><a href="http://joelwinkelman.org/vita.pdf">My Vita (PDF)</a> &rarr;</h1>
+
+<p class="lead">Much of my research and teaching has been about the relationship between work and democracy in American political thought. My current substantive research interests focus on the varieties of work ethics in the Progressive-era United States, the history of social science, and the link between those two topics, and the development of ideas about democracy. I am also interested in the settlement movement, and the public practice of the liberal arts.</p>
+
+<p class="lead">You can also find me <a href="http://www.discogs.com/user/jmwink">digging for records</a> on Discogs and looking for birds in the woods.</p>
+
+{{ template "chrome/default_foot.html" }}
+
 </div>
 
-<div class="pagination">
-  {{ if false }}
-    <a class="pagination-item older" href="/page2">Older</a>
-  {{ else }}
-    <span class="pagination-item older">Older</span>
-  {{ end }}
-
-  {{ if false }}
-    {{ if false }}
-      <a class="pagination-item newer" href="/">Newer</a>
-    {{ else }}
-      <a class="pagination-item newer" href="/page1">Newer</a>
-    {{ end }}
-  {{ else }}
-    <span class="pagination-item newer">Newer</span>
-  {{ end }}
 </div>
-
-{{ template "chrome/default_foot.html" . }}
