@@ -8,19 +8,38 @@
 	</p>
 	<h2>My Vita</h2>
 
-	<p>Most of my research has been about ideas about work and democracy in American Political Thought. My current work focuses on the varieties of work ethics, the history of social science, and the link between those two topics, and the development of democratic thought. I'm also interested in ideas about authority.</p>
-        
+	<p>Most of my teaching and research has been about ideas about <a href="http://dx.doi.org/10.1017/S0034670513000314">work</a> and <a href="http://www.palgrave-journals.com/polity/journal/v44/n1/abs/pol201116a.html">democracy</a> in American Political Thought. My current work focuses on the varieties of work ethics, the history of social science, and the link between those two topics, and the development of democratic thought. I'm also interested in the settlement movement, and the public practice of the liberal arts.</p>
+</div>        
 
         <!-- Recent Posts section -->
-        <h1 class="post-title">Recent Posts</h1>
-          <section id="main">
-            <ul id="list">
-              {{ range first 10 .Data.Pages }}
-              {{ .Render "summary"}}
-              {{ end }}
-            </ul>
-          </section>
+<div class="posts">
+  {{ range first $pagination .Data.Pages }}
+    {{ if eq .Type "post"}}
+      <div class="post">
+        <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+        <span class="post-date">{{ .Date.Format .Site.Params.DateForm }}</span>
+        {{ .Content }}
       </div>
-    </div>
+    {{ end }}
+  {{ end }}
+</div>
+
+<div class="pagination">
+  {{ if false }}
+    <a class="pagination-item older" href="/page2">Older</a>
+  {{ else }}
+    <span class="pagination-item older">Older</span>
+  {{ end }}
+
+  {{ if false }}
+    {{ if false }}
+      <a class="pagination-item newer" href="/">Newer</a>
+    {{ else }}
+      <a class="pagination-item newer" href="/page1">Newer</a>
+    {{ end }}
+  {{ else }}
+    <span class="pagination-item newer">Newer</span>
+  {{ end }}
+</div>
 
 {{ template "chrome/default_foot.html" . }}
