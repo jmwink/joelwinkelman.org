@@ -2,34 +2,25 @@
 
 {{ $pagination := 5 }}
 
-<div class="posts">
-  {{ range first $pagination .Data.Pages }}
-    {{ if eq .Type "post"}}
-      <div class="post">
-        <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-        <span class="post-date">{{ .Date.Format .Site.Params.DateForm }}</span>
-        {{ .Content }}
+<div class="container content">
+	<p class="message"> 
+        I teach political theory at Hamilton College. I am a Visiting Assistant Professor in the <a href="http://www.hamilton.edu/academics/departments/Home?dept=Government">Government Department</a>. I work also with the <a href="http://www.hamilton.edu/levitt">Arthur Levitt Public Affairs Center</a>
+	</p>
+	<h2>My Vita</h2>
+
+	<p>Most of my research has been about ideas about work and democracy in American Political Thought. My current work focuses on the varieties of work ethics, the history of social science, and the link between those two topics, and the development of democratic thought. I'm also interested in ideas about authority.</p>
+        
+
+        <!-- Recent Posts section -->
+        <h1 class="post-title">Recent Posts</h1>
+          <section id="main">
+            <ul id="list">
+              {{ range first 10 .Data.Pages }}
+              {{ .Render "summary"}}
+              {{ end }}
+            </ul>
+          </section>
       </div>
-    {{ end }}
-  {{ end }}
-</div>
-
-<div class="pagination">
-  {{ if false }}
-    <a class="pagination-item older" href="/page2">Older</a>
-  {{ else }}
-    <span class="pagination-item older">Older</span>
-  {{ end }}
-
-  {{ if false }}
-    {{ if false }}
-      <a class="pagination-item newer" href="/">Newer</a>
-    {{ else }}
-      <a class="pagination-item newer" href="/page1">Newer</a>
-    {{ end }}
-  {{ else }}
-    <span class="pagination-item newer">Newer</span>
-  {{ end }}
-</div>
+    </div>
 
 {{ template "chrome/default_foot.html" . }}

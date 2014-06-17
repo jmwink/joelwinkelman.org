@@ -13,10 +13,10 @@
     },
 
     "params": {
-        "Title": "Lanyon",
-        "Tagline": "A Jekyll theme",
-        "Author": "Mark Otto",
-        "DateForm": "Jan 2 2006",
+        "Title": "Joel Winkelman",
+        "Tagline": "Hamilton College",
+        "Author": "Joel Winkelman",
+        "DateForm": "2 Jan 2006",
         "Github": {
             "Url": "http://github.com/jmwink/lanyon-hugo",
             "Head": "master"
