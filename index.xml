@@ -4,7 +4,7 @@
     <title> </title>
     <link>http://jmwink.github.io/index.xml</link>
     <language>en-us</language>
-    <author>Mark Otto</author>
+    <author>Joel Winkelman</author>
     <rights>(C) 2014</rights>
     <updated>2014-01-02 00:00:00 &#43;0000 UTC</updated>
 
@@ -14,7 +14,7 @@
           <title>Introducing Lanyon</title>
           <link>http://jmwink.github.io/2014/01/02/introducing-lanyon/</link>
           <pubDate>Thu, 02 Jan 2014 00:00:00 UTC</pubDate>
-          <author>Mark Otto</author>
+          <author>Joel Winkelman</author>
           <guid>http://jmwink.github.io/2014/01/02/introducing-lanyon/</guid>
           <description>
 
@@ -64,7 +64,7 @@
           <title>Example content</title>
           <link>http://jmwink.github.io/2014/01/01/example-content/</link>
           <pubDate>Wed, 01 Jan 2014 00:00:00 UTC</pubDate>
-          <author>Mark Otto</author>
+          <author>Joel Winkelman</author>
           <guid>http://jmwink.github.io/2014/01/01/example-content/</guid>
           <description>
 
@@ -199,7 +199,7 @@ adder(2, 6);
           <title>What&#39;s Jekyll?</title>
           <link>http://jmwink.github.io/2013/12/31/whats-jekyll/</link>
           <pubDate>Tue, 31 Dec 2013 00:00:00 UTC</pubDate>
-          <author>Mark Otto</author>
+          <author>Joel Winkelman</author>
           <guid>http://jmwink.github.io/2013/12/31/whats-jekyll/</guid>
           <description>&lt;p&gt;&lt;a href=&#34;http://jekyllrb.com&#34;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&#34;https://github.com/mojombo/jekyll/blob/master/README.markdown&#34;&gt;the project&amp;rsquo;s readme&lt;/a&gt;:&lt;/p&gt;
 
