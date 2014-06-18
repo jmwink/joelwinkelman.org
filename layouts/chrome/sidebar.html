@@ -5,12 +5,12 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <p>A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.</p>
+    <p>Below are pages relating to my teaching, research, and professional activities at <a href="http://www.hamilton.edu" target="_blank">Hamilton College</a>. 
   </div>
 
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item {{ if eq .Url "/" }} active {{ end }}" href="/">Home</a>
-    <a class="sidebar-nav-item {{ if eq .Url "post" }} active {{ end }}" href="/post">Posts</a>
+    <a class="sidebar-nav-item {{ if eq .Url "post" }} active {{ end }}" href="/post">Bibli(bl)ography</a>
 
     {{ $thisperma := .Permalink }}
     {{ range .Site.Recent.ByWeight }}
@@ -18,10 +18,12 @@
         <a class="sidebar-nav-item {{ if eq .Permalink $thisperma }} active {{ end }}" href="{{ .Permalink }}">{{ .Title }}</a>
       {{ end }}
     {{ end }}
+<!-- Should the site become more technical in nature, enable this to send people to github. 
 
     <a class="sidebar-nav-item" href="{{ .Site.Params.Github.Url }}/archive/{{ .Site.Params.Github.Head }}.zip">Download</a>
     <a class="sidebar-nav-item" href="{{ .Site.Params.Github.Url }}">GitHub project</a>
     <span class="sidebar-nav-item">Currently on {{ .Site.Params.Github.Head }}</span>
+-->
   </nav>
 
   <div class="sidebar-item">

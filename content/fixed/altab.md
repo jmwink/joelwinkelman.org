@@ -1,7 +1,7 @@
 {
-    "title": "Another Fixed Page",
+    "title": "Teaching",
     "sidebar": true,
-    "weight": "2"
+    "weight": "3"
 }
 
-This is just another example of a fixed page, to demonstrate ordered elements in the sidebar.
+I teach a range of courses  
