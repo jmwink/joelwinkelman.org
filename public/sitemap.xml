@@ -2,48 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-<<<<<<< HEAD
     <loc>http://www.joelwinkelman.org/</loc>
-=======
-    <loc>http://jmwink.github.io/</loc>
->>>>>>> 8b7a947ea0c799ad5091b452348b644b8a8f9f85
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-<<<<<<< HEAD
     <loc>http://www.joelwinkelman.org/404/</loc>
-=======
-    <loc>http://jmwink.github.io/404/</loc>
->>>>>>> 8b7a947ea0c799ad5091b452348b644b8a8f9f85
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-<<<<<<< HEAD
     <loc>http://www.joelwinkelman.org/about/</loc>
-=======
-    <loc>http://jmwink.github.io/about/</loc>
->>>>>>> 8b7a947ea0c799ad5091b452348b644b8a8f9f85
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-<<<<<<< HEAD
     <loc>http://www.joelwinkelman.org/research/</loc>
-=======
-    <loc>http://jmwink.github.io/research/</loc>
->>>>>>> 8b7a947ea0c799ad5091b452348b644b8a8f9f85
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-<<<<<<< HEAD
     <loc>http://www.joelwinkelman.org/teaching/</loc>
-=======
-    <loc>http://jmwink.github.io/teaching/</loc>
->>>>>>> 8b7a947ea0c799ad5091b452348b644b8a8f9f85
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
   </url>
   
