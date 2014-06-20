@@ -2,7 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> </title>
+<<<<<<< HEAD
     <link>http://www.joelwinkelman.org/index.xml</link>
+=======
+    <link>http://jmwink.github.io/index.xml</link>
+>>>>>>> 8b7a947ea0c799ad5091b452348b644b8a8f9f85
     <language>en-us</language>
     <author>Joel Winkelman</author>
     <rights>(C) 2008</rights>
