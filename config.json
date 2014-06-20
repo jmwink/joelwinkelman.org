@@ -5,7 +5,7 @@
 
     "builddrafts": false,
 
-    "baseurl": "http://jmwink.github.io/lanyon-hugo/",
+    "baseurl": "http://www.joelwinkelman.org",
     "canonifyurls": true,
     "permalinks": {
         "post": ":year/:month/:day/:title/",
@@ -18,7 +18,7 @@
         "Author": "Joel Winkelman",
         "DateForm": "2 Jan 2006",
         "Github": {
-            "Url": "http://github.com/jmwink/lanyon-hugo",
+            "Url": "http://www.joelwinkelman.org",
             "Head": "master"
         }
     }
