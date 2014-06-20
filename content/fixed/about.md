@@ -6,8 +6,12 @@
 
 <p class="message">
   This site houses teaching- and research-related materials, and a space for informal writing. If anything here interests you, please get in touch at 
-<script type="text/javascript">
-//  A wizard to generate this code is at http://www.jottings.com/obfuscator/
+<script type="text/javascript" language="javascript">
+<!--
+// Email obfuscator script 2.1 by Tim Williams, University of Arizona
+// Random encryption key feature by Andrew Moulden, Site Engineering Ltd
+// This code is freeware provided these four comment lines remain intact
+// A wizard to generate this code is at http://www.jottings.com/obfuscator/
 { coded = "7sH3.zvStH3bGS@IbGv3.jsb"
   key = "rLKYgvC7QF5E4yn9HZpMqcXBoRwxIVPdNalmkAShOUWiTjJus6z081e2fG3btD"
   shift=coded.length
@@ -25,7 +29,8 @@
 document.write("<a href='mailto:"+link+"'>"+link+"</a>")
 }
 //-->
-</script><noscript>Sorry, you need Javascript on to email me.</noscript>. 
+</script><noscript>Sorry, you need Javascript on to email me.</noscript>
+
 </p>
 
 This site was built with [Hugo](http://hugo.spf13.com), using the [Lanyon](http://lanyon.getpoole.com) theme for [Poole](http://getpoole.com). 
