@@ -5,7 +5,10 @@
 }
 
 <p class="message">
-  This site houses teaching- and research-related materials, and a space for informal writing. If anything here interests you, please get in touch at 
+  This site houses teaching- and research-related materials, and a space for informal writing. It was built with [Hugo](http://hugo.spf13.com), using the [Lanyon](http://lanyon.getpoole.com) theme for [Poole](http://getpoole.com). 
+</p>
+
+If anything here interests you, please get in touch at 
 <script type="text/javascript" language="javascript">
 <!--
 // Email obfuscator script 2.1 by Tim Williams, University of Arizona
@@ -31,7 +34,6 @@ document.write("<a href='mailto:"+link+"'>"+link+"</a>")
 //-->
 </script><noscript>Sorry, you need Javascript on to email me.</noscript>
 
-</p>
 
-This site was built with [Hugo](http://hugo.spf13.com), using the [Lanyon](http://lanyon.getpoole.com) theme for [Poole](http://getpoole.com). 
+
 
