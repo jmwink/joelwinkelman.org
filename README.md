@@ -1,49 +1,185 @@
-# Lanyon for Hugo
+# Immaculate
 
-[Lanyon](http://github.com/poole/lanyon) is a great theme for [Jekyll](http://jekyllrb.com). This is a port of that theme, but to another static site generator, [Hugo](http://github.com/spf13/hugo). I'm aiming to get the same look and interactions as the original Lanyon.
+A beautiful, fast, AMP-compliant Jekyll theme based on Tufte CSS.
 
-Hugo and Jekyll are similar in that, out of the box, you can't make a presentable website out of them. You need some kind of theme first, or otherwise your site will be *really* bare-bones. If you're a designer, you might be comfortable doing that yourself. If you aren't, Jekyll has a thriving ecosystem of themes waiting for you. Hugo, being younger than Jekyll, does not. Lanyon-Hugo attempts to remedy that problem.
+[Check it out here!](https://cdn.ampproject.org/c/siawyoung.com/immaculate/)
 
-Lanyon-Hugo is a theme designed for blogging. While Hugo is flexible enough to turn almost any static content into a website, this theme is focused on blog-like use cases. Lanyon-Hugo retains the CSS, and therefore the look and feel, of the parent theme, Lanyon. This includes a sidebar that is hidden by default, and can be toggled with a button (implemented entirely in CSS). The sidebar gives some convenient navigation links, but when it is hidden, Lanyon-Hugo, just like Lanyon, is discreet and puts your content front and center.
+[Google AMP](https://www.ampproject.org/)
 
-## Usage
+[Tufte CSS](https://github.com/edwardtufte/tufte-css)
 
-To begin authoring content, all you have to do is clone this repository and start writing Markdown files in [`content/post`](content/post). Front matter for Hugo can be written in JSON, YAML or TOML. I am using JSON out of preference, but it's your content - use whatever language you want. Two example posts are already provided (lifted from the parent Lanyon, with links fixed for Hugo) as an example of the front matter you need.
+Immaculate is really fast, thanks to Google AMP. When served over Google's CDN, you will see typical `DOMContentLoaded` times of well under 100ms (when using the leaner stylesheet, see below). The benefits are most obvious for slower connections. On the *Regular - 2G* throttling setting in Chrome, the demo page still manages a `DOMContentLoaded` of under 500ms.
 
-Note for Jekyll users: Jekyll parses the date out of your post's title, but Hugo does not. You must specify a date in the front matter. I specify the permalinks to look like Jekyll's in `config.json`, so if you set the date correctly, the permalinks will also look correct.
+Immaculate includes tag support for some of the more commonly-used Tufte CSS layout options, including sidenotes, margin notes, and full-width figures. Other features, such as `newthought` or epigraphs, can be used by typing raw HTML in your Markdown files. I might add helper tags for these in the future.
 
-Hugo's universal config file is [`config.json`](config.json) (or YAML, or TOML). You can change the base URL of your site, the title, and the tagline from this file. The link to your GitHub repository (for whatever the site represents, say a dev blog, or a personal GitHub Page) can also be changed here. If you are familiar with Hugo, you already know that you can add more parameters to the `params` object to introduce more variables.
+**Caveat (need hep!)**: AMP HTML does not allow form elements, including checkboxes, which are used in Tufte CSS to toggle the display of sidenotes and margin notes at smaller widths. As such, I've modified Immaculate to disable this functionality at smaller widths for the time being. It's a big deal, and I'm looking for help on emulating this functionality without using checkboxes.
 
-### Fixed Pages
+## Getting Started
 
-The original Lanyon had a layout for "pages", fixed content that didn't have a date. Lanyon-Hugo retains this concept, and refers to these pages as "fixed" (that's the content type, if you're familiar with Hugo concepts). Fixed pages will not display a date, only a title, and they will not be listed on the homepage of your site. Pages such as About (an example `about.md` has been lifted from the parent Lanyon) should generally be fixed.
+```
+git clone git@github.com:siawyoung/immaculate.git
+cd immaculate
+bundle install
+bundle exec jekyll serve --baseurl ''
+```
 
-You can alter the content of the custom 404 via [`fixed/404.md`](content/fixed/404.md). This is useful if you want a custom 404 for your GitHub Page.
+Modify the template files and `_config.yml` to your liking, and publish away!
 
-### Sidebar Links
+## Helper Tags
 
-To indicate that a given piece of content should be linked in the sidebar, add a key `sidebar` to the front matter, and set it to `true`. See [`about.md`](content/fixed/about.md) for an example of this. You can pin content to the sidebar regardless of whether it is a post, or if it is fixed.
+Immaculate comes with a few helper tags. The source code for these tags can be found in `_plugins/shortcodes.rb`.
 
-Sidebar content is ordered by weight, specified in the front matter. The lowest weight goes to the top and the greatest weight goes to the bottom. I've included an extra example file, [`altab.md`](content/fixed/altab.md), to demonstrate this feature. If no weight is specified in the front matter, then the weight is zero (this behavior probably comes from the zero-value of integers in Go). You can set negative weights to exploit this feature. Note that the weight must be wrapped in quotes (ie a string). Looks like Hugo converts it to an integer internally.
+### Image
 
-Note for Jekyll users: In the original Lanyon, any content that had the `page` layout would be added to the sidebar. However, in Lanyon-Hugo, content with the `fixed` type will not be added to the sidebar automatically. You must specify the `sidebar` flag in the front matter.
+```
+{% image <src> <width> <height> <option?> %}
+```
 
-Lanyon-Hugo generates a post list at `/post/`. By default, Lanyon doesn't actually have a post list, so there is no link for it anywhere in the theme. In my opinion, there are two sensible places to put it: in between the pagination buttons, and on the sidebar. You could conceivably do both. I've added a sidebar entry for it. If you want to add a button between the pagination buttons, take a look at my Lanyon fork; it has an example of how to do such a thing.
+The `image` tag allows you to insert AMP-compliant images into the post.
 
-### Look and Feel
+`src` is the `src` attribute of the image tag.
 
-The CSS from the original Lanyon is unchanged, and you can find it in [`static/css`](static/css). Any of the modifications suggested for Lanyon can also be applied to Lanyon-Hugo, by changing the CSS here.
+`width` and `height` of the image must be specified, as per AMP specifications.
 
-You can use syntax highlighting, if you have [Pygments](http://pygments.org/). See the "example content" post for an example. Lanyon has a color scheme of some kind for Pygments in `css/syntax.css`, but right now Hugo doesn't know how to use it (everything will be higlighted in Monokai). When Hugo implements this feature, I will also add it to Lanyon-Hugo. More detail on Hugo's syntax highlighting shortcode can be found [here](http://hugo.spf13.com/extras/highlighting).
+`option` - an optional argument which supports the following options:
 
-## To Do
+- `fw` - makes the image full width
+- `raw` - outputs the raw `amp-img` tag, can be used in conjunction with margin notes
 
-While Lanyon-Hugo is aiming for functional compatibility with Lanyon (ie all the old functionality is available and looks similar), there are still some things I'm missing:
-- pagination. Lanyon-Hugo does not have next/previous buttons (well they're there, but as you can see, they don't have any links). Jekyll's pagination feature is quite good, but Hugo's pagination is still on the roadmap for now. I may implement a hackish solution in the meantime, but ideally I'd rather wait until Hugo has a solid solution for this problem.
+##### Example usage
 
-## Contributing
+```
+{% image https://image.com/image.jpg 1200 600 fw %}
+```
 
-If you're interested in hacking on this theme, please check out [CONTRIBUTING](CONTRIBUTING.md).
+### Youtube
+
+```
+{% youtube <id> <width> <height> <option?> %}
+```
+
+The `youtube` tag allows you to insert AMP-compliant embedded Youtube videos into the post.
+
+`id` is the Youtube viddeo ID.
+
+`width` and `height` of the video must be specified, as per AMP specifications.
+
+`option` - an optional argument which supports the following options:
+
+- `fw` - makes the video full width
+- `raw` - outputs the raw `amp-youtube` tag, can be used in conjunction with margin notes
+
+##### Example usage
+
+```
+{% youtube aj2h3h1sf 600 400 %}
+```
+
+### Sidenote
+
+(See caveat above)
+
+```
+{% sidenote <id> <body> %}
+```
+
+The `sidenote` tag allows you insert sidenotes into the post.
+
+`id` is a unique identifier for the sidenote, and it can be anything - it will not show up visually.
+
+`body` is the body of the sidenote. It can also accommodate `span`-level HTML elements (`<b>`, `<em>`, `<i>`, no block-level elements).
+
+##### Example usage
+
+```
+This is a very long{% sidenote meh Yes, <i>very</i> long. %} sentence.
+```
+
+### Margin Note
+
+(See caveat above)
+
+```
+{% marginnote <id> %}
+<body>
+{% endmarginnote %}
+```
+
+The `marginnote` tag block allows you to insert margin notes into the post.
+
+`id` is a unique identifier for the margin note, and it can be anything - it will not show up visually.
+
+`body` is the body of the sidenote. It can also accommodate `span`-level HTML elements (`<b>`, `<em>`, `<i>`, no block-level elements).
+
+You can also use margin notes in conjunction with `image` and `youtube` tags by specifying the `raw` option.
+
+##### Example usage
+
+```
+{% marginnote yt %}
+{% youtube aj2h3h1sf 350 200 raw %}
+This is a <b>extremely</b> succinct example.
+{% endmarginnote %}
+```
+
+### Blockquote
+
+```
+{% blockquote <footer> %}
+<body>
+{% endblockquote %}
+```
+
+Standard Markdown blockquotes are supported by Immaculate. Additionally, the `blockquote` tag block allows you to insert Tufte-styled blockquotes with footers.
+
+##### Example usage
+
+```
+{% blockquote Friedrich Nietzsche, Thus Spoke Zarathustra %}
+
+But say, my brothers, what can the child do that even the lion could not do? Why must the preying lion still become a child? The child is innocence and forgetting, a new beginning, a game, a self-propelled wheel, a first movement, a sacred “Yes.” For the game of creation, my brothers, a sacred “Yes” is needed: the spirit now wills his own will, and he who had been lost to the world now conquers the world.
+
+{% endblockquote %}
+```
+
+## Even faster performance
+
+By default, Immaculate will utilize Tufte CSS's default font stack, which uses `et-book`. The custom font files are about 160kb in total, which is somewhat of a strain. If performance is important, Immaculate also ships with a leaner version of Tufte CSS, which uses just [the Palatino stack instead](http://www.cssfontstack.com/Palatino). It has 99.29% Mac and 86.13% Windows distribution.
+
+You just need to change the following line in `_includes/styles.scss`:
+
+```
+@import 'tufte';
+// change to:
+@import 'lean_tufte';
+```
+
+Just from pure anecdotal experience, using the leaner stylesheet reduces typical `DOMContentLoaded` times from 300ms down to 50ms when served through Google's CDN. Personally, `et-book` just looks a lot better to me, so pick whatever floats your boat.
+
+## Syntax highlighting
+
+Immaculate supports syntax highlighting, but the stylesheet is commented out by default to keep the page lean. Simply uncomment the following line in `_includes/styles.scss`:
+
+```css
+// @import 'syntax-highlighting';
+```
+
+## FAQ
+
+*How can I use the sans-serif versin of Tufte CSS, which uses Gill Sans?*
+
+You can override the CSS style in `_includes/styles.scss` with the font stack of your choice:
+
+```
+body {
+  font-family: "Gill Sans"
+}
+```
+
+## Credits
+
+Credits to [Amplify](https://github.com/ageitgey/amplify) for most of the AMP-related code.
 
 ## License
-MIT, see [LICENSE.md](LICENSE.md).
+
+MIT
